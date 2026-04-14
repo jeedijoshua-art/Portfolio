@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jeedijoshua | Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resume-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background: var(--card-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            color: var(--text-main);
+        }
+
+        .resume-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .resume-header h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--text-main), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .resume-section {
+            margin-bottom: 25px;
+        }
+
+        .resume-section h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .resume-item {
+            margin-bottom: 15px;
+        }
+
+        .resume-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .resume-item .meta {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .resume-item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-dim);
+        }
+
+        .resume-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .resume-skill {
+            padding: 5px 15px;
+            background: rgba(108, 92, 231, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.85rem;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .resume-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-theme"> <!-- Default to dark for consistency -->
+
+
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+    <div class="background-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <div class="resume-container" data-aos="fade-up">
+        <header class="resume-header">
+            <div>
+                <h1>Jeedijoshua</h1>
+                <p style="color: var(--secondary); font-weight: 600; font-size: 1.2rem;">Senior Frontend Engineer & UI
+                    Strategist</p>
+            </div>
+            <div style="text-align: right;">
+                <p>📧 jeedijoshua@example.com</p>
+                <p>🌐 github.com/jeedijoshua</p>
+                <p>📍 Hyderabad, India</p>
+            </div>
+        </header>
+
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Innovative Frontend Developer with 4+ years of experience in building high-performance, visually
+                stunning web applications. Expert in React, modern CSS architectures, and interactive UI systems.
+                Passionate about bridging the gap between design and engineering to create seamless digital experiences
+                that drive user engagement and business growth.
+            </p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Key Expertise</h2>
+            <div class="resume-item">
+                <div class="resume-skills">
+                    <div class="skill-category">
+                        <strong style="color: var(--secondary); display: block; margin-bottom: 8px;">Core
+                            Engineering</strong>
+                        <span class="resume-skill">React.js</span>
+                        <span class="resume-skill">TypeScript</span>
+                        <span class="resume-skill">Next.js</span>
+                        <span class="resume-skill">JavaScript (ES6+)</span>
+                        <span class="resume-skill">REST/GraphQL</span>
+                    </div>
+                    <div class="skill-category" style="margin-top: 12px;">
+                        <strong style="color: var(--secondary); display: block; margin-bottom: 8px;">UI &
+                            Styling</strong>
+                        <span class="resume-skill">CSS3 / SCSS</span>
+                        <span class="resume-skill">Framer Motion</span>
+                        <span class="resume-skill">Tailwind CSS</span>
+                        <span class="resume-skill">Glassmorphism</span>
+                        <span class="resume-skill">Responsive Design</span>
+                    </div>
+                    <div class="skill-category" style="margin-top: 12px;">
+                        <strong style="color: var(--secondary); display: block; margin-bottom: 8px;">Tools &
+                            Dev-Ops</strong>
+                        <span class="resume-skill">Git / GitHub</span>
+                        <span class="resume-skill">Vite / Webpack</span>
+                        <span class="resume-skill">Jest / RTL</span>
+                        <span class="resume-skill">Figma</span>
+                        <span class="resume-skill">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Professional Experience</h2>
+            <div class="resume-item">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3>Lead Frontend Developer</h3>
+                    <div class="meta">Creative Tech Labs • 2024 - Present</div>
+                </div>
+                <ul style="margin-left: 20px; color: var(--text-dim); line-height: 1.6; margin-top: 5px;">
+                    <li>Architected and launched 5+ large-scale web applications using **React** and **Next.js**,
+                        improving initial load times by 40%.</li>
+                    <li>Developed a custom **glassmorphism UI library** adopted by the entire design team, reducing
+                        frontend development time by 30%.</li>
+                    <li>Mentored junior developers and introduced standardized code review processes focused on
+                        accessibility and performance.</li>
+                </ul>
+            </div>
+            <div class="resume-item" style="margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3>Software Engineer (Contract)</h3>
+                    <div class="meta">Innovate Global • 2023 - 2024</div>
+                </div>
+                <ul style="margin-left: 20px; color: var(--text-dim); line-height: 1.6; margin-top: 5px;">
+                    <li>Refactored legacy codebase into modern functional components, resulting in a 25% reduction in
+                        bug reports.</li>
+                    <li>Implemented complex data visualizations using **D3.js** and **Chart.js** for a financial
+                        analytics dashboard.</li>
+                    <li>Collaborated cross-functionally with UX designers to ensure 100% WCAG 2.1 accessibility
+                        compliance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Featured Projects</h2>
+            <div class="resume-item">
+                <h3>Interactive Engine v2.0</h3>
+                <p>A flagship interactive portfolio engine featuring 3D physics, real-time lighting effects, and a
+                    custom-built animation sequencer. Used by 500+ developers globally.</p>
+            </div>
+            <div class="resume-item" style="margin-top: 15px;">
+                <h3>Vision AI Dashboard</h3>
+                <p>A high-performance monitoring tool for AI agents, integrating real-time telemetry and predictive
+                    analytics visualizations with a futuristic glass UI.</p>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            <div class="resume-item">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <h3>B.Tech in Computer Science & Engineering</h3>
+                    <div class="meta">Tech University • 2021 - 2025</div>
+                </div>
+                <p style="margin-top: 5px;">Specialized in Intelligent Systems and Advanced Web Architectures.
+                    Cumulative GPA: 3.9/4.0</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Custom Cursor (Same as index.html)
+        const cursor = document.getElementById('cursor');
+        const cursorBlur = document.getElementById('cursor-blur');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorBlur.style.left = e.clientX + 'px';
+            cursorBlur.style.top = e.clientY + 'px';
+        });
+
+        // Preferred Theme Check (Same as index.html)
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JeediJoshua | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+
+    <button id="theme-toggle" title="Toggle Theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+
+    <div class="background-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+    <main>
+        <section class="hero">
+            <div class="about" data-aos="fade-up">
+                <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                    data-tilt-max-glare="0.1">
+                    <div class="profile">
+                        <img src="profile1.jpeg" alt="Jeedijoshua">
+                        <div class="profile-overlay"></div>
+                    </div>
+
+                    <h1 class="name" data-aos="fade-right" data-aos-delay="100">JeediJoshua</h1>
+                    <h2 class="subtitle" data-aos="fade-left" data-aos-delay="200">I'm a <span
+                            class="typing-text"></span></h2>
+
+                    <p class="description" data-aos="fade-up" data-aos-delay="300">
+                        I am a Computer Science student focused on building strong fundamentals in programming and
+                        problem-solving. I enjoy coding and continuously practice to strengthen my logical
+                        thinking!
+                    </p>
+
+                    <div class="skills" data-aos="zoom-in" data-aos-delay="400">
+                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+
+                    <div class="social-links" data-aos="fade-up" data-aos-delay="500">
+                        <a href="https://github.com/jeedijoshua-art" target="_blank" rel="noopener noreferrer"
+                            class="social-btn">GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/joshuajeedi/" target="_blank" rel="noopener noreferrer"
+                            class="social-btn">LinkedIn
+                        </a>
+                        <a href="https://x.com/JoshuaJeedi" target="_blank" rel="noopener noreferrer"
+                            class="social-btn">X
+                        </a>
+                    </div>
+
+                    <div class="cta-group" data-aos="zoom-in" data-aos-delay="600">
+                        <a href="mailto:jeedijoshua@karunya.edu.in?subject=Connection%20Request%20from%20Portfolio&body=Hi%20Jeedijoshua,%0A%0AI'd%20like%20to%20connect%20with%20you%20regarding..."
+                            class="btn">Let’s Connect</a>
+                        <a href="resume_new.html" class="btn btn-outline">View Resume</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="waves-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(108, 92, 231, 0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(108, 92, 231, 0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(108, 92, 231, 128)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--bg-color)" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Vanilla Tilt for 3D effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- AOS Scroll Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Application Logic -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

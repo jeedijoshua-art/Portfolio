@@ -1,0 +1,429 @@
+:root {
+    --bg-deep: #020205;
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #00d2ff;
+    --text-main: #f8f9fa;
+    --text-dim: rgba(248, 249, 250, 0.6);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.08);
+    --glass-blur: blur(20px);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* --- BACKGROUND ELEMENTS --- */
+.bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #020205 100%);
+}
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+    pointer-events: none;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+}
+
+.glow-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: -1;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--primary);
+    top: -200px;
+    right: -100px;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    bottom: -100px;
+    left: -100px;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(100px, 50px) scale(1.1);
+    }
+}
+
+/* --- NAVIGATION --- */
+.back-nav {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    backdrop-filter: var(--glass-blur);
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateX(-5px);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+}
+
+/* --- LAYOUT --- */
+.resume-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px 30px;
+    backdrop-filter: var(--glass-blur);
+    text-align: center;
+}
+
+.profile-card h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-card p {
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    transition: var(--transition);
+}
+
+.contact-item svg {
+    width: 18px;
+    height: 18px;
+    color: var(--primary);
+}
+
+.connect-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+}
+
+.connect-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.4);
+}
+
+.sidebar-section {
+    margin-top: 40px;
+}
+
+.sidebar-section h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chip {
+    padding: 8px 16px;
+    background: rgba(108, 92, 231, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.skill-chip:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: var(--glass-blur);
+    transition: var(--transition);
+}
+
+.section-card:hover {
+    border-color: rgba(108, 92, 231, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+}
+
+.summary-text .highlight {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(108, 92, 231, 0.3);
+    z-index: -1;
+}
+
+.resume-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--border);
+}
+
+.resume-item:last-child {
+    margin-bottom: 0;
+}
+
+.resume-item h3 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.item-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-bottom: 15px;
+}
+
+.resume-item ul {
+    list-style: none;
+}
+
+.resume-item li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+.resume-item li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .resume-wrapper {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .back-nav {
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .back-btn {
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile specific fixes */
+@media (max-width: 600px) {
+    .resume-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 30px;
+    }
+
+    .section-card {
+        padding: 30px 20px;
+    }
+
+    .profile-card {
+        padding: 30px 20px;
+    }
+
+    .profile-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .summary-text {
+        font-size: 1rem;
+    }
+
+    .resume-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .item-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Tablet fixes */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .resume-wrapper {
+        max-width: 800px;
+    }
+}
